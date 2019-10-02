@@ -6,10 +6,14 @@ def abundant_check(number):
     for i in range(1, number):
         if number%i == 0:
             divisor_list.append(i)
-    print(divisor_list)
     if sum(divisor_list) > number:
-        print(str(True))
+        return True
     else:
-        print(str(False))
+        return False
 
-abundant_check(12)
+number = int(input('Enter any number: '))
+if abundant_check(number):
+    print(str(number) + ' is an abundant number')
+else:
+    print(str(number) + ' is not an abundant number')
+
